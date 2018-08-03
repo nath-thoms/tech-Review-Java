@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" minHeight="500.0" minWidth="500.0" prefHeight="812.0" prefWidth="950.0" style="-fx-background-color: transparency;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutY="111.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: AQUAMARINE#73EEDC;">
+         <children>
+            <AnchorPane layoutX="324.0" layoutY="124.0" prefHeight="63.0" prefWidth="303.0" style="-fx-background-color: #73C2BE; -fx-border-color: white; -fx-border-width: 3px;">
+               <children>
+                  <JFXTextField focusColor="#48f0c7" layoutX="56.0" layoutY="10.0" prefHeight="36.0" prefWidth="230.0" styleClass="loginEntry" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/icons8-female-profile-90.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="324.0" layoutY="201.0" prefHeight="63.0" prefWidth="303.0" style="-fx-background-color: #73C2BE; -fx-border-color: white; -fx-border-width: 3px;">
+               <children>
+                  <JFXTextField focusColor="#48f0c7" layoutX="56.0" layoutY="11.0" prefHeight="36.0" prefWidth="230.0" styleClass="loginEntry" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="20.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <JFXButton layoutX="356.0" layoutY="288.0" onAction="#loadSecond" prefHeight="45.0" prefWidth="239.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Login." textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="324.0" layoutY="353.0" prefHeight="21.0" prefWidth="303.0" />
+            <Separator layoutX="324.0" layoutY="421.0" prefHeight="21.0" prefWidth="303.0" />
+            <JFXButton layoutX="372.0" layoutY="374.0" prefHeight="45.0" prefWidth="97.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Sign up." textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="482.0" layoutY="374.0" prefHeight="45.0" prefWidth="97.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="About." textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink layoutX="404.0" layoutY="442.0" opacity="0.7" text="Forgot your password?" textAlignment="CENTER" textFill="#404e5c" underline="true">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+            </Hyperlink>
+         </children></AnchorPane>
+      <AnchorPane maxWidth="950.0" minWidth="950.0" prefHeight="103.0" prefWidth="950.0" style="-fx-background-color: #404E5C;">
+         <children>
+            <Label layoutX="97.0" layoutY="12.0" prefHeight="79.0" prefWidth="281.0" text="TechReview." textFill="#fcfcfc">
+               <font>
+                  <Font name="Roboto" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="71.0" fitWidth="63.0" layoutX="25.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@mesh1.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

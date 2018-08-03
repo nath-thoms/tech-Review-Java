@@ -1,0 +1,39 @@
+
+
+.loginEntry {
+    -fx-text-fill: white ;
+    -fx-font-weight: bold;
+}
+
+.list-cell:filled{
+    -fx-background-color:  #404E5C;
+}
+
+/*.list-cell:filled:hover {*/
+    /*-fx-background-color: #73C2BE;*/
+/*}*/
+
+.list-cell:filled:selected {
+    -fx-background-color:  #73EEDC;
+}
+
+.list-cell {
+    -fx-padding: 10px;
+    -fx-margin-top: 3em;
+    -fx-background-radius: 2em;
+    -fx-text-fill: WHITE;
+    -fx-font-weight: BOLD;
+    /*-fx-background-color:  #404E5C;*/
+    -fx-background-color: #73C2BE;
+    -fx-wrap-text: true;
+}
+
+.list-view {
+    -fx-border-color: white;
+    -fx-border-radius: 1em;
+    -fx-border-width: 2px;
+    -fx-focus-color: transparent;
+    -fx-background-radius: 1em;
+    -fx-background-color:  #73C2BE ;
+}
+
