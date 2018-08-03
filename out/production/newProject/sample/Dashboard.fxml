@@ -56,12 +56,12 @@
                         <Font name="Roboto Bold" size="18.0" />
                      </font>
                   </JFXButton>
-                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="27.0" layoutY="447.0" onMouseClicked="#sortPriceHighToLow" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="27.0" layoutY="447.0" onMouseClicked="#sortPriceLowToHigh" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@assets/price.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="80.0" layoutY="445.0" onMouseClicked="#sortPriceLowToHigh" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="80.0" layoutY="445.0" onMouseClicked="#sortPriceHighToLow" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
                         <Image url="@assets/price.png" />
                      </image>

@@ -96,14 +96,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="70" />
-          <entry key="java" value="2390" />
+          <entry key="fxml" value="77" />
+          <entry key="java" value="2396" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2390" />
-          <entry key="XML" value="70" />
+          <entry key="JAVA" value="2396" />
+          <entry key="XML" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -147,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+            <state relative-caret-position="64">
+              <caret line="240" column="34" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4048#4467#0" expanded="true" />
@@ -191,8 +191,8 @@
         <entry file="file://$PROJECT_DIR$/src/sample/addProduct.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="809">
-              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+            <state relative-caret-position="363">
+              <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="53" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -218,11 +218,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="373">
               <caret line="63" column="128" selection-start-line="63" selection-start-column="128" selection-end-line="63" selection-end-column="128" />
             </state>
           </provider>
@@ -273,8 +273,8 @@
         <option value="$PROJECT_DIR$/src/sample/datamodel/MainCategory.java" />
         <option value="$PROJECT_DIR$/src/sample/AddProductController.java" />
         <option value="$PROJECT_DIR$/src/sample/datamodel/Product.java" />
-        <option value="$PROJECT_DIR$/src/sample/Dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Dashboard.java" />
+        <option value="$PROJECT_DIR$/src/sample/Dashboard.fxml" />
       </list>
     </option>
   </component>
@@ -344,7 +344,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533309938221" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533310917997" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -470,12 +470,12 @@
       <workItem from="1532936503305" duration="4517000" />
       <workItem from="1532964305407" duration="9644000" />
       <workItem from="1533281788280" duration="621000" />
-      <workItem from="1533288939896" duration="12211000" />
+      <workItem from="1533288939896" duration="13203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73591000" />
+    <option name="totallyTimeSpent" value="74583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -614,23 +614,15 @@
     <entry file="file://$PROJECT_DIR$/src/sample/addProduct.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="63" column="128" selection-start-line="63" selection-start-column="128" selection-end-line="63" selection-end-column="128" />
+        <state relative-caret-position="363">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="53" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+        <state relative-caret-position="64">
+          <caret line="240" column="34" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4048#4467#0" expanded="true" />
@@ -638,6 +630,14 @@
             <element signature="e#9300#9309#0" expanded="true" />
             <element signature="e#10144#10153#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="63" column="128" selection-start-line="63" selection-start-column="128" selection-end-line="63" selection-end-column="128" />
         </state>
       </provider>
     </entry>
