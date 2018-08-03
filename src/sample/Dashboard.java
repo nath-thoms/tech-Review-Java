@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Callback;
 import sample.datamodel.MainCategory;
 import sample.datamodel.Product;
 import sample.datamodel.Review;
@@ -58,6 +61,9 @@ public class Dashboard {
     @FXML
     private AnchorPane reviewPane;
 
+    @FXML
+    private ContextMenu listContextMenu;
+
 
     /**
      * Initialize method runs when app initialises. Currently creating placeholder data and adding ths to productList
@@ -90,6 +96,46 @@ public class Dashboard {
         // ****** REVIEW MODEL DATA ******
         prod1.addReview("Fantastic product", "Excellent product, good value for money. Would recommend.", 5, "Nathan Chadwick");
 
+        listContextMenu = new ContextMenu();
+        MenuItem deleteMenuItem = new MenuItem("Delete product");
+        deleteMenuItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Product product = productListView.getSelectionModel().getSelectedItem();
+                deleteItem(product);
+            }
+        });
+
+        listContextMenu.getItems().addAll(deleteMenuItem);
+
+        productListView.setCellFactory(new Callback<ListView<Product>, ListCell<Product>>() {
+            @Override
+            public ListCell<Product> call(ListView<Product> param) {
+                ListCell<Product> cell = new ListCell<Product>() {
+
+                    @Override
+                    protected void updateItem(Product item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if(empty) {
+                            setText(null);
+                        } else {
+                            setText(item.getName());
+                        }
+                    }
+                };
+
+                cell.emptyProperty().addListener(
+                        (obs, wasEmpty, isNowEmpty) -> {
+                            if(isNowEmpty) {
+                                cell.setContextMenu(null);
+                            } else {
+                                cell.setContextMenu(listContextMenu);
+                            }
+                        }
+                );
+                return cell;
+            }
+        });
 
     }
 
@@ -164,5 +210,21 @@ public class Dashboard {
     public List<Product> getList() {
         return productList;
     }
+
+    public void deleteItem(Product product) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete product");
+        alert.setHeaderText("Delete item: " + product.getName() + "?");
+        alert.setContentText("Are you sure you wish to remove this product? Press OK to confirm or Cancel to go back");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.isPresent() && (result.get() == ButtonType.OK)) {
+            productListView.getItems().remove(product);
+            productOverview.setVisible(false);
+            descriptionPane.setVisible(false);
+            reviewPane.setVisible(false);
+        }
+    }
+
 }
 
