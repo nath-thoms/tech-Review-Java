@@ -96,6 +96,10 @@ public class Dashboard {
         // ****** REVIEW MODEL DATA ******
         prod1.addReview("Fantastic product", "Excellent product, good value for money. Would recommend.", 5, "Nathan Chadwick");
 
+        /**
+         * Initialising new listContextMenu
+         * Gets the selected listView item and calls deleteItem.
+         */
         listContextMenu = new ContextMenu();
         MenuItem deleteMenuItem = new MenuItem("Delete product");
         deleteMenuItem.setOnAction(new EventHandler<ActionEvent>() {
@@ -106,8 +110,14 @@ public class Dashboard {
             }
         });
 
+        // adds deleteMenuItem to the listContextMenu
         listContextMenu.getItems().addAll(deleteMenuItem);
 
+        /**
+         * Callback to change cell factory. Sets the displayed data in a filled cell
+         * adds the listContextMenu listener to cells that are not empty.
+         * Empty cells context menu and fill is set to null.
+         */
         productListView.setCellFactory(new Callback<ListView<Product>, ListCell<Product>>() {
             @Override
             public ListCell<Product> call(ListView<Product> param) {
@@ -143,7 +153,6 @@ public class Dashboard {
      * Method handles clicks in the ListView of products. Sets the AnchorPane displaying the product overview to 'visible'.
      * Populates product nodes with the fields from the instance of each Product class.
      */
-
     @FXML
     public void handleClickListView() {
         productOverview.setVisible(true);
@@ -160,7 +169,6 @@ public class Dashboard {
         productDescription.setText(item.getDescription());
         productDescription.setWrapText(true);
         reviewList.getItems().setAll(item.getNewReviews());
-        //productLikes.setText("Likes: " + item.getLikes());
     }
 
     /**
@@ -173,7 +181,6 @@ public class Dashboard {
      * newProduct is added to ArrayList productList - who's contents are then re-set in the List View FXML container to
      * display newly added product to the list of products in the application.
      */
-
     @FXML
     public void showAddProductDialog() {
         Dialog <ButtonType> addProductDialog = new Dialog<>();
@@ -189,7 +196,6 @@ public class Dashboard {
             e.printStackTrace();
             return;
         }
-
 
         addProductDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         addProductDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
@@ -207,10 +213,13 @@ public class Dashboard {
         }
     }
 
-    public List<Product> getList() {
-        return productList;
-    }
-
+    /**
+     * Method to delete passed Product from the productListView.
+     * Generates a new confirmation alert type. Setting info.
+     * Alert is shown and waits for user input. If OK result
+     * getsItems from ListView and removes passed product.
+     * Sets the product view panes visible property to false.
+     */
     public void deleteItem(Product product) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete product");
@@ -225,6 +234,5 @@ public class Dashboard {
             reviewPane.setVisible(false);
         }
     }
-
 }
 
