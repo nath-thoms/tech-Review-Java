@@ -47,15 +47,25 @@
          <children>
             <AnchorPane prefHeight="703.0" prefWidth="247.0" style="-fx-background-color: #73C2BE;">
                <children>
-                  <ListView fx:id="productListView" layoutX="24.0" layoutY="14.0" onMouseClicked="#handleClickListView" prefHeight="358.0" prefWidth="200.0">
+                  <ListView fx:id="productListView" layoutX="24.0" layoutY="77.0" onMouseClicked="#handleClickListView" prefHeight="358.0" prefWidth="200.0">
                      <padding>
                         <Insets bottom="2.0" left="5.0" right="5.0" top="5.0" />
                      </padding></ListView>
-                  <JFXButton layoutX="27.0" layoutY="385.0" onMouseClicked="#showAddProductDialog" prefHeight="45.0" prefWidth="194.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Add new product" textFill="WHITE">
+                  <JFXButton layoutX="27.0" layoutY="562.0" onMouseClicked="#showAddProductDialog" prefHeight="45.0" prefWidth="194.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Add new product" textFill="WHITE">
                      <font>
                         <Font name="Roboto Bold" size="18.0" />
                      </font>
                   </JFXButton>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="27.0" layoutY="447.0" onMouseClicked="#sortPriceHighToLow" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/price.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="80.0" layoutY="445.0" onMouseClicked="#sortPriceLowToHigh" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@assets/price.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="productOverview" layoutX="257.0" layoutY="14.0" prefHeight="103.0" prefWidth="683.0" style="-fx-background-color: #404E5C; -fx-background-radius: 4em;" visible="false">
@@ -92,7 +102,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="reviewPane" visible="false" layoutX="261.0" layoutY="419.0" prefHeight="221.0" prefWidth="675.0" style="-fx-background-color: #404E5C; -fx-background-radius: 3em;">
+            <AnchorPane fx:id="reviewPane" layoutX="261.0" layoutY="419.0" prefHeight="221.0" prefWidth="675.0" style="-fx-background-color: #404E5C; -fx-background-radius: 3em;" visible="false">
                <children>
                   <Label layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="105.0" text="Reviews:" textFill="#fffefe">
                      <font>

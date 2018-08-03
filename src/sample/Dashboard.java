@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,6 +20,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -115,7 +118,7 @@ public class Dashboard {
 
         /**
          * Callback to change cell factory. Sets the displayed data in a filled cell
-         * adds the listContextMenu listener to cells that are not empty.
+         * Lambda function adds the listContextMenu listener to cells that are not empty.
          * Empty cells context menu and fill is set to null.
          */
         productListView.setCellFactory(new Callback<ListView<Product>, ListCell<Product>>() {
@@ -129,7 +132,7 @@ public class Dashboard {
                         if(empty) {
                             setText(null);
                         } else {
-                            setText(item.getName());
+                            setText(item.getName() + "\n" + "£" + item.getPrice());
                         }
                     }
                 };
@@ -234,5 +237,42 @@ public class Dashboard {
             reviewPane.setVisible(false);
         }
     }
+
+    public void sortPriceLowToHigh() {
+        SortedList<Product> productList = new SortedList<Product>(productListView.getItems(),
+                new Comparator<Product>() {
+                    @Override
+                    public int compare(Product o1, Product o2) {
+                        double value1 = Double.parseDouble(o1.getPrice());
+                        double value2 = Double.parseDouble(o2.getPrice());
+                        if(value1 < value2) {
+                            return -1;
+                        } else if(value1 > value2) {
+                            return 1;
+                        }
+                        return 0;
+                    }
+                });
+        productListView.getItems().setAll(productList);
+    }
+
+    public void sortPriceHighToLow() {
+        SortedList<Product> productList = new SortedList<Product>(productListView.getItems(),
+                new Comparator<Product>() {
+                    @Override
+                    public int compare(Product o1, Product o2) {
+                        double value1 = Double.parseDouble(o1.getPrice());
+                        double value2 = Double.parseDouble(o2.getPrice());
+                        if(value1 < value2) {
+                            return 1;
+                        } else if(value1 > value2) {
+                            return -1;
+                        }
+                        return 0;
+                    }
+                });
+        productListView.getItems().setAll(productList);
+    }
+
 }
 
