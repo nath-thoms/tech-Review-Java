@@ -89,9 +89,6 @@ public class Dashboard {
     @FXML
     private ImageView cold;
 
-    @FXML
-    private StackPane dialogPane;
-
 
     /**
      * Initialize method runs when app initialises. Currently creating placeholder data and adding ths to productList
