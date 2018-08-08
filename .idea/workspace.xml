@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/assets/cold.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/assets/fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/assets/thumb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/newProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/newProject/sample/CSS/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/newProject/sample/CSS/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/newProject/sample/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/newProject/sample/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/datamodel/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/datamodel/Product.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,28 +101,28 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="7" />
-          <entry key="fxml" value="188" />
-          <entry key="java" value="5247" />
+          <entry key="fxml" value="219" />
+          <entry key="java" value="5623" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="JAVA" value="5247" />
-          <entry key="XML" value="188" />
+          <entry key="JAVA" value="5623" />
+          <entry key="XML" value="219" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
           <entry key="fxml" value="5" />
-          <entry key="java" value="6" />
+          <entry key="java" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="7" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
@@ -153,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="203" column="33" selection-start-line="203" selection-start-column="33" selection-end-line="203" selection-end-column="33" />
+            <state relative-caret-position="414">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,6 +158,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1041">
+              <caret line="378" column="35" lean-forward="true" selection-start-line="378" selection-start-column="35" selection-end-line="378" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/datamodel/Product.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="514">
@@ -193,8 +197,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="119" column="54" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
+            <state relative-caret-position="211">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -227,6 +231,7 @@
       <find>thumb</find>
       <find>val</find>
       <find>mouse</find>
+      <find>stack</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -254,8 +259,8 @@
         <option value="$PROJECT_DIR$/src/sample/addReview.fxml" />
         <option value="$PROJECT_DIR$/src/sample/CSS/Main.css" />
         <option value="$PROJECT_DIR$/src/sample/datamodel/Product.java" />
-        <option value="$PROJECT_DIR$/src/sample/Dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Dashboard.java" />
+        <option value="$PROJECT_DIR$/src/sample/Dashboard.fxml" />
       </list>
     </option>
   </component>
@@ -325,7 +330,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533727754984" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533729762886" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/controlsfx-9.0.0.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -453,12 +458,12 @@
       <workItem from="1532964305407" duration="9644000" />
       <workItem from="1533281788280" duration="621000" />
       <workItem from="1533288939896" duration="13335000" />
-      <workItem from="1533712511817" duration="13403000" />
+      <workItem from="1533712511817" duration="15703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88118000" />
+    <option name="totallyTimeSpent" value="90418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -540,16 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/datamodel/MainCategory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -612,6 +607,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1041">
+          <caret line="378" column="35" lean-forward="true" selection-start-line="378" selection-start-column="35" selection-end-line="378" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/datamodel/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
@@ -619,24 +642,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1620#1621#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="119" column="54" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="203" column="33" selection-start-line="203" selection-start-column="33" selection-end-line="203" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

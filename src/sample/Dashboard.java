@@ -1,6 +1,8 @@
 package sample;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -12,8 +14,9 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
-import sample.datamodel.MainCategory;
 import sample.datamodel.Product;
 import sample.datamodel.Review;
 
@@ -85,6 +88,9 @@ public class Dashboard {
 
     @FXML
     private ImageView cold;
+
+    @FXML
+    private StackPane dialogPane;
 
 
     /**
@@ -395,6 +401,5 @@ public class Dashboard {
         }
 
     }
-
 }
 
