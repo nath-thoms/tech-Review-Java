@@ -71,6 +71,21 @@ public class Dashboard {
     @FXML
     private JFXButton addNewRev;
 
+    @FXML
+    private ImageView thumbImage;
+
+    @FXML
+    private ImageView thumbImage2;
+
+    @FXML
+    private AnchorPane likeBar;
+
+    @FXML
+    private ImageView fire;
+
+    @FXML
+    private ImageView cold;
+
 
     /**
      * Initialize method runs when app initialises. Currently creating placeholder data and adding ths to productList
@@ -154,6 +169,8 @@ public class Dashboard {
             }
         });
 
+        thumbImage.setMouseTransparent(true);
+        thumbImage2.setMouseTransparent(true);
     }
 
     /**
@@ -166,6 +183,7 @@ public class Dashboard {
         descriptionPane.setVisible(true);
         reviewPane.setVisible(true);
         addNewRev.setVisible(true);
+        likeBar.setVisible(true);
 
         Image thumbNail = new Image("sample/assets/joypad.png");
         Product item = productListView.getSelectionModel().getSelectedItem();
@@ -176,6 +194,15 @@ public class Dashboard {
         productDate.setText("Release date: " + item.getRelease().toString());
         productPrice.setText("£" + String.valueOf(item.getPrice()));
         productThumb.setImage(thumbNail);
+        productLikes.setText(Integer.toString(item.getLikes()));
+        if(item.getLikes() >= 10) {
+            fire.setVisible(true);
+        } else if(item.getLikes() < 0) {
+            cold.setVisible(true);
+        } else {
+            fire.setVisible(false);
+            cold.setVisible(false);
+        }
 
         productDescription.setText(item.getDescription());
         productDescription.setWrapText(true);
@@ -262,7 +289,6 @@ public class Dashboard {
             itemReviews.add(newReview);
             reviewList.getItems().setAll(itemReviews);
 
-
         } else {
             System.out.println("Cancel pressed");
         }
@@ -290,6 +316,12 @@ public class Dashboard {
         }
     }
 
+    /**
+     * Method to sort the Products in the product list by price, low to high.
+     * adds the items from the listview into a SortedList to access comparator functionality.
+     * Overrides compare to method to sort the items by price.
+     * Sets the contents of the ListView with the newly sorted list.
+     */
     public void sortPriceLowToHigh() {
         SortedList<Product> productList = new SortedList<Product>(productListView.getItems(),
                 new Comparator<Product>() {
@@ -308,6 +340,12 @@ public class Dashboard {
         productListView.getItems().setAll(productList);
     }
 
+    /**
+     * Method to sort the Products in the product list by price, high to low.
+     * adds the items from the listview into a SortedList to access comparator functionality.
+     * Overrides compare to method to sort the items by price.
+     * Sets the contents of the ListView with the newly sorted list.
+     */
     public void sortPriceHighToLow() {
         SortedList<Product> productList = new SortedList<Product>(productListView.getItems(),
                 new Comparator<Product>() {
@@ -324,6 +362,38 @@ public class Dashboard {
                     }
                 });
         productListView.getItems().setAll(productList);
+    }
+
+    public void upVote() {
+        Product item = productListView.getSelectionModel().getSelectedItem();
+        Integer newLikes = item.getLikes() +1;
+        item.setLikes(newLikes);
+        productLikes.setText(Integer.toString(item.getLikes()));
+
+        if(item.getLikes() >= 10) {
+            fire.setVisible(true);
+        }
+
+        if(item.getLikes() >= 0) {
+            cold.setVisible(false);
+        }
+
+    }
+
+    public void downVote() {
+        Product item = productListView.getSelectionModel().getSelectedItem();
+        Integer newLikes = item.getLikes() -1;
+        item.setLikes(newLikes);
+        productLikes.setText(Integer.toString(item.getLikes()));
+
+        if(item.getLikes() < 0) {
+            cold.setVisible(true);
+        }
+
+        if(item.getLikes() < 10) {
+            fire.setVisible(false);
+        }
+
     }
 
 }

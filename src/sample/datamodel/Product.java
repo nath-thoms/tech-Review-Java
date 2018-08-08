@@ -72,6 +72,10 @@ public class Product {
         return likes;
     }
 
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
     @Override
     public String toString() {
         return name;

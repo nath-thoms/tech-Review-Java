@@ -112,11 +112,55 @@
                   <ListView fx:id="reviewList" layoutX="14.0" layoutY="56.0" prefHeight="155.0" prefWidth="649.0" />
                </children>
             </AnchorPane>
-            <JFXButton fx:id="addNewRev" visible="false" layoutX="265.0" layoutY="644.0" onMouseClicked="#showAddReviewDialog" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Add new review" textFill="WHITE">
+            <JFXButton fx:id="addNewRev" layoutX="265.0" layoutY="644.0" onMouseClicked="#showAddReviewDialog" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Add new review" textFill="WHITE" visible="false">
                <font>
                   <Font name="Roboto Bold" size="18.0" />
                </font>
             </JFXButton>
+            <AnchorPane fx:id="likeBar" layoutX="690.0" layoutY="644.0" prefHeight="45.0" prefWidth="231.0" visible="false">
+               <children>
+                  <Label fx:id="likeLabel" alignment="CENTER" layoutY="4.0" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #404E5C; -fx-background-radius: 3em; -fx-border-color: white; -fx-border-radius: 3em; -fx-border-width: 3px;" text="Likes" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="89.0" onMouseClicked="#upVote" prefHeight="45.0" prefWidth="44.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="." textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="5.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="thumbImage" fitHeight="29.0" fitWidth="24.0" layoutX="99.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/thumb.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="productLikes" alignment="CENTER" layoutX="133.0" layoutY="1.0" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: #404E5C; -fx-background-radius: 3em; -fx-border-color: white; -fx-border-radius: 3em; -fx-border-width: 3px;" text="11" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="178.0" onMouseClicked="#downVote" prefHeight="45.0" prefWidth="44.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="." textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="5.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="thumbImage2" fitHeight="29.0" fitWidth="24.0" layoutX="188.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@assets/thumb.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="fire" fitHeight="63.0" fitWidth="70.0" layoutX="690.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@assets/fire.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cold" fitHeight="63.0" fitWidth="70.0" layoutX="690.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@assets/cold.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
