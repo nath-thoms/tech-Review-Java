@@ -1,5 +1,6 @@
 package sample;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -66,6 +67,9 @@ public class Dashboard {
 
     @FXML
     private ContextMenu listContextMenu;
+
+    @FXML
+    private JFXButton addNewRev;
 
 
     /**
@@ -161,9 +165,13 @@ public class Dashboard {
         productOverview.setVisible(true);
         descriptionPane.setVisible(true);
         reviewPane.setVisible(true);
+        addNewRev.setVisible(true);
 
         Image thumbNail = new Image("sample/assets/joypad.png");
         Product item = productListView.getSelectionModel().getSelectedItem();
+        if(item == null) {
+            System.out.println("Woops!");
+        }
         productName.setText(item.getName());
         productDate.setText("Release date: " + item.getRelease().toString());
         productPrice.setText("£" + String.valueOf(item.getPrice()));
@@ -175,7 +183,7 @@ public class Dashboard {
     }
 
     /**
-     * method creates a new Dialog pain and initialises a window for the dialog pane.
+     * method creates a new Dialog pane and initialises a window for the dialog pane.
      * new FXMLLoader to load correct FXML file.
      * adds an OK and CANCEL dialog button to the dialog pane.
      * Dialog pane set to showAndWait so that window stays open awaiting user input.
@@ -211,6 +219,50 @@ public class Dashboard {
             productList.add(newProduct);
             productListView.getItems().setAll(productList);
             System.out.println("OK pressed");
+        } else {
+            System.out.println("Cancel pressed");
+        }
+    }
+
+    /**
+     * Method creates a new dialog pane and initialises a window.
+     * Using FXML loader, loads the addReview.fxml markup file.
+     * OK and Cancel dialog buttons are added and dialog is set to showAndWait to allow input.
+     * If OK is pressed, an instance of AddReviewController is initialised which calls processReview
+     * which takes the data from input fields and returns a new Review.
+     * The current selected item is retrieved from the productListView.
+     * The ArrayList of reviews on the current Product is retrieved.
+     * The newly created Review is added to the ArrayList of reviews on that Product.
+     * The ArrayList of reviews is then added to the ListView node and rendered in the app.
+     */
+    @FXML
+    public void showAddReviewDialog() {
+        Dialog <ButtonType> addReviewDialog = new Dialog<>();
+        addReviewDialog.initOwner(mainDashboard.getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("addReview.fxml"));
+        try {
+            addReviewDialog.getDialogPane().setContent(fxmlLoader.load());
+        } catch(IOException e) {
+            System.out.println("Couldn't load dialog window.");
+            return;
+        }
+        addReviewDialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        addReviewDialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+
+        Optional<ButtonType> result = addReviewDialog.showAndWait();
+        if(result.isPresent() && result.get() == ButtonType.OK) {
+            System.out.println("OK Pressed");
+            AddReviewController controller = fxmlLoader.getController();
+            Review newReview = controller.processReview();
+            System.out.println(newReview.toString());
+
+            Product item = productListView.getSelectionModel().getSelectedItem();
+            ArrayList itemReviews = item.getNewReviews();
+            itemReviews.add(newReview);
+            reviewList.getItems().setAll(itemReviews);
+
+
         } else {
             System.out.println("Cancel pressed");
         }

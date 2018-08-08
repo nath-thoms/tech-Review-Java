@@ -112,6 +112,11 @@
                   <ListView fx:id="reviewList" layoutX="14.0" layoutY="56.0" prefHeight="155.0" prefWidth="649.0" />
                </children>
             </AnchorPane>
+            <JFXButton fx:id="addNewRev" visible="false" layoutX="265.0" layoutY="644.0" onMouseClicked="#showAddReviewDialog" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: #404E5C; -fx-background-radius: 7em; -fx-border-color: white; -fx-border-radius: 7em; -fx-border-width: 3px;" text="Add new review" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>

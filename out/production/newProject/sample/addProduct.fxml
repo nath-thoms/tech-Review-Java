@@ -42,27 +42,32 @@
                   <Font name="Roboto Bold" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="prodName" layoutX="176.0" layoutY="118.0" prefHeight="35.0" prefWidth="302.0" promptText="Enter product name..." style="-fx-background-radius: 2em;">
+            <TextField fx:id="prodName" layoutX="207.0" layoutY="118.0" prefHeight="35.0" prefWidth="271.0" promptText="Enter product name..." style="-fx-background-radius: 2em;">
                <font>
                   <Font name="Roboto" size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="prodPrice" layoutX="176.0" layoutY="189.0" prefHeight="35.0" prefWidth="302.0" style="-fx-background-radius: 2em;" text="£">
+            <TextField fx:id="prodPrice" layoutX="210.0" layoutY="189.0" prefHeight="35.0" prefWidth="268.0" style="-fx-background-radius: 2em;">
                <font>
                   <Font name="Roboto" size="14.0" />
                </font>
             </TextField>
-            <DatePicker fx:id="prodDate" layoutX="210.0" layoutY="258.0" prefHeight="39.0" prefWidth="235.0" promptText="Select release date..." />
+            <DatePicker fx:id="prodDate" layoutX="220.0" layoutY="258.0" prefHeight="39.0" prefWidth="235.0" promptText="Select release date..." />
             <Label alignment="CENTER" layoutX="23.0" layoutY="322.0" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: #48f0c7; -fx-background-radius: 2em;" text="Description:" textAlignment="CENTER" textFill="#404e5c">
                <font>
                   <Font name="Roboto Bold" size="16.0" />
                </font>
             </Label>
-            <TextArea fx:id="prodDesc" layoutX="176.0" layoutY="329.0" prefHeight="200.0" prefWidth="305.0" promptText="Enter product description..." style="-fx-border-radius: 2em;" wrapText="true">
+            <TextArea fx:id="prodDesc" layoutX="192.0" layoutY="329.0" prefHeight="200.0" prefWidth="305.0" promptText="Enter product description..." style="-fx-border-radius: 2em;" wrapText="true">
                <font>
                   <Font name="Roboto" size="14.0" />
                </font>
             </TextArea>
+            <Label alignment="CENTER" layoutX="178.0" layoutY="189.0" prefHeight="35.0" prefWidth="29.0" style="-fx-background-color: #404E5C; -fx-border-color: #48f0c7; -fx-border-width: 2px; -fx-border-radius: 5em; -fx-background-radius: 7em;" text="£" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </content>
 </DialogPane>

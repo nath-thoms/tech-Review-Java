@@ -19,7 +19,7 @@
 
 .list-cell {
     -fx-padding: 10px;
-    -fx-margin-top: 3em;
+    -fx-margin: 3em;
     -fx-background-radius: 2em;
     -fx-text-fill: WHITE;
     -fx-font-weight: BOLD;
